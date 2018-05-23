@@ -4,12 +4,12 @@ In order to ease compilation of Projects utilising [libremarkable](https://githu
 
 In order to build a project with this image execute the following command in your crate root:
 ```bash
-docker run -v $(pwd):/project --rm --name remarkable-build remarkable-toolchain-rust
+docker run -v $(pwd):/project --rm --name remarkable-build themegatb/remarkable-toolchain-rust
 ```
 By default it calls `make` and thus expects a `Makefile` to be present.
 If you would rather call cargo directly you can just append your `cargo` command at the end e.g.:
 ```bash
-docker run -v $(pwd):/project --rm --name remarkable-build remarkable-toolchain-rust cargo build --target=armv7-unknown-linux-gnueabihf
+docker run -v $(pwd):/project --rm --name remarkable-build themegatb/remarkable-toolchain-rust cargo build --target=armv7-unknown-linux-gnueabihf
 ```
 
 ## Disclaimer
